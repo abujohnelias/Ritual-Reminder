@@ -135,12 +135,28 @@ class _HomePageState extends State<HomePage> {
   }
 
   void saveExisting(int index) {
-    setState(() {
+    // setState(() {
+    //   db.todaysHabitList[index][0] = _newHabbitNameController.text;
+    // });
+    // _newHabbitNameController.clear();
+    // Navigator.of(context).pop();
+    // db.updateDatabase();
+
+    if (_newHabbitNameController.text.isNotEmpty) {
+      setState(() {
       db.todaysHabitList[index][0] = _newHabbitNameController.text;
     });
-    _newHabbitNameController.clear();
-    Navigator.of(context).pop();
-    db.updateDatabase();
+
+      _newHabbitNameController.clear();
+      Navigator.of(context).pop();
+    } else {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          backgroundColor: Colors.grey.shade600,
+          content: const Text('Habit name cannot be empty!'),
+        ),
+      );
+    }
   }
 
   // void deleteHabbit(int index) {
