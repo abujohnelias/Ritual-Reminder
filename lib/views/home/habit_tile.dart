@@ -52,15 +52,22 @@ class HabitTile extends StatelessWidget {
             ),
           ], color: Colors.grey[100], borderRadius: BorderRadius.circular(12)),
           child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              //checkbox
-              Checkbox(
-                value: habitCompleted,
-                onChanged: onChanged,
+              Row(
+                children: [
+                  //checkbox
+                  Checkbox(
+                    value: habitCompleted,
+                    onChanged: onChanged,
+                  ),
+
+                  //name
+                  Text(habitName),
+                ],
               ),
 
-              //name
-              Text(habitName),
+              const Icon(Icons.arrow_back_ios_new_rounded,color: Colors.grey,)
             ],
           ),
         ),
