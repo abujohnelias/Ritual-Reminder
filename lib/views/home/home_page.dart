@@ -86,6 +86,9 @@ class _HomePageState extends State<HomePage> {
               );
             },
           ),
+          SizedBox(
+            height: MediaQuery.of(context).size.height * 0.1,
+          )
         ],
       )),
     );
