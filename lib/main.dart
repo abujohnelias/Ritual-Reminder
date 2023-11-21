@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/adapters.dart';
-import 'package:ritual_reminder/views/home/home_page.dart';
+
+import 'package:ritual_reminder/views/splashscreen/splash_screen.dart';
 
 void main() async {
   //initialize
   await Hive.initFlutter();
 
   //open box
-   await Hive.openBox("Habit_Database");
+  await Hive.openBox("Habit_Database");
 
   //
   runApp(const MyApp());
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primarySwatch: Colors.grey),
-      home: const HomePage(),
+      home: SplashScreen(),
     );
   }
 }
