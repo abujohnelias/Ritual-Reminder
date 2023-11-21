@@ -60,7 +60,7 @@ class _HomePageState extends State<HomePage> {
       floatingActionButton: MyFloatingActionButton(
         onPressed: () => createNewHabbit(),
       ),
-      backgroundColor: Colors.grey[200],
+      backgroundColor: Colors.grey[300],
       body: SafeArea(
           child: ListView(
         children: [

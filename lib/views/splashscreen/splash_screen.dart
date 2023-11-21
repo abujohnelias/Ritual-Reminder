@@ -27,7 +27,7 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        color: Colors.grey,
+        color: Colors.grey[400],
         child: Center(
           child: Image.asset('assets/images/ritual reminder-logos_black.png',
               width: 275, height: 275),
